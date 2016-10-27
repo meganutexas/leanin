@@ -29,7 +29,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #C5E3BF;
+  background-color: #d6ebf2;
 }
 body {
   color: #000;
@@ -49,6 +49,15 @@ hr {
   border-color: #993F6C;
 }
 
+img {
+  width: 780px;
+  margin: auto;
+}
+
+.thumbnail {
+	width: 325px;
+}
+
 question {
   color: #993F6C;
   font-weight: bold;
@@ -65,8 +74,8 @@ answer {
   display: table;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  -webkit-box-shadow: inset 0 0 100px #993F6C;;
+          box-shadow: inset 0 0 100px #993F6C;;
 }
 .site-wrapper-inner {
   display: table-cell;
