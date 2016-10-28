@@ -7,7 +7,7 @@ $(function () {
 })
 
 $(function(){
-
+	$("#faqs-menu").load("menus/faqs.html");
 });
 
 document.registerElement('question');
