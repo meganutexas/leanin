@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: C++ Tutorial</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand">Project Illuminate: C++ Tutorial</h2>
+	              <center>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="linux.html">Linux</a></li>
+	                <li><a href="intro.html">Intro</a></li>
+	                <li><a href="hello_world.html">Hello World!</a></li>
+	                <li><a href="math_and_user_input.html">Math & User Input</a></li>
+	                &emsp; <br>
+	                <li><a href="functions.html">Functions</a></li>
+	                <li><a href="structs.html">Structs</a></li>
+	                <li><a href="loops.html">Loops</a></li>
+	                <li class="active"><a href="#">Arrays</a></li>
+	                <li><a href="decisions.html">Decisions</a></li>
+	                <li><a href="compile.html">Compile</a></li>
+	              </ul>
+	          	</center>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+				<h1 align="center">Arrays</h1>
+				<hr>
+				
+				<p>
+					Sometimes we want to store lists of data together in one place.  For
+					example, it might be handy to have a list of all your grades from
+					science class.  You could go back later and average all the grades in
+					the list together to find out your final grade in science.  In C++,
+					lists are called <i>arrays</i>, and they have some special properties.
+				</p>
+
+				<p>
+					You can think of an array like a motel.  Let's begin by imagining a
+					single-story motel complex.  The rooms are laid out in a row right
+					next to each other.  If you stand in front of room 7, you know that
+					room 8 will be right next door, and room 9 will be after room 8.
+					Arrays work in the same way.  We can put values inside each of the
+					"rooms" in the array, and since they are numed logically, we can
+					quickly find any "room" we need.
+				</p>
+
+				<p>
+					When you build a motel, you have to decide ahead of time how many
+					rooms you want there to be, and you can't change your mind after the
+					motel is built (without paying a lot of construction costs).  In a C++
+					array, at the beginning of the function you declare the type, name,
+					and size of your array.  Going back to the science grade example, we
+					would declare a science grade array like this:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>float</var> gradeArray[<num>5</num>];&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					The brackets with the num mean that we are constructing an array
+					that is five units in length named <i>gradeArray</i>.  We declare it
+					as a float because we plan on storing floating point nums in each
+					of the "rooms" in the array.  We can substitute the num 5 with any
+					length of array we want, but once we declare our array to be a certain
+					size, we can't change it.
+				</p>
+
+				<p>
+					Now that we've declared an array, we need to put things inside it.
+					Inside our main function, we'll enter five grades into the array.
+					When you put something into an array, you have to tell it where it
+					should go, just like in a motel, you don't get to randomly choose a
+					room.  We talk about a specific location in an array by writing the
+					name of the array and then putting the location num in brackets,
+					like this: <tt>gradeArray[0]</tt> .  As with all counting in computer
+					science, we have to begin at 0, so the first "room" in the array motel
+					is room 0, then room 1, etc.  In <i>gradeArray</i>, there are five
+					locations, which are numed 0, 1, 2, 3, and 4.  Let's put some
+					values into them in the following code:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;gradeArray[<num>0</num>] = <num>98.3</num>;&emsp; <br>
+						&emsp;gradeArray[<num>1</num>] = <num>91.1</num>;&emsp; <br>
+						&emsp;gradeArray[<num>2</num>] = <num>89.8</num>;&emsp; <br>
+						&emsp;gradeArray[<num>3</num>] = <num>0.5</num>;&emsp; <br>
+						&emsp;gradeArray[<num>4</num>] = <num>95.0</num>;&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					Now that we have our grades in an array, we want to average them all
+					together to calculate our final grade.  To do this, we need to visit
+					each location in the array (imagine going from door to door in a
+					motel) and sum up the values in each position, and then divide them by
+					the num of values we added.  In order to do this systematically, we
+					can use a for-loop.  We will loop through each element, or location,
+					in the array and add its value to a var called <i>gradeSum</i>
+					that we initialize ahead of time.  After we finish the loop, we will
+					divide <i>gradeSum</i> by 5 to get the average.  Here's the code for
+					this program:
+				</p>
+
+				<p class="code">
+					<br>
+					&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>&emsp; <br>
+					&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+					&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+					    &emsp;&emsp;<comment>//declare the array and the other vars</comment>&emsp; <br>
+					    &emsp;&emsp;<var>float</var> gradeArray[<num>5</num>];     &emsp; <br>
+					    &emsp;&emsp;<var>float</var> gradeSum, gradeAverage;&emsp; <br>
+					    &emsp;&emsp;<var>int</var> i;&emsp; <br>&emsp; <br>
+
+					    &emsp;&emsp;<comment>//put some grades into the array</comment>&emsp; <br>
+					    &emsp;&emsp;gradeArray[<num>0</num>] = <num>98.3</num>;&emsp; <br>
+					    &emsp;&emsp;gradeArray[<num>1</num>] = <num>91.1</num>;&emsp; <br>
+					    &emsp;&emsp;gradeArray[<num>2</num>] = <num>89.8</num>;&emsp; <br>
+					    &emsp;&emsp;gradeArray[<num>3</num>] = <num>90.5</num>;&emsp; <br>
+					    &emsp;&emsp;gradeArray[<num>4</num>] = <num>5.0</num>;&emsp; <br>&emsp; <br>
+
+					    &emsp;&emsp;<comment>//initialize the gradeSum var to be 0</comment>&emsp; <br>
+					    &emsp;&emsp;gradeSum = <num>0</num>;&emsp; <br>&emsp; <br>
+
+					    &emsp;&emsp;<comment>//loop through each location in gradeArray (there are 5)</comment>&emsp; <br>
+					    &emsp;&emsp;<for>for</for> (i = <num>0</num>; i &gt; <num>5</num>; i++){&emsp; <br>
+					        &emsp;&emsp;&emsp;<comment>//add the value of the thing stored at location </comment>&emsp; <br>
+					        &emsp;&emsp;&emsp;<comment>//i in gradeArray to gradeSum</comment>&emsp; <br>
+					        &emsp;&emsp;&emsp;gradeSum += gradeArray[i];&emsp; <br>
+					    &emsp;&emsp;}&emsp; <br>&emsp; <br>
+					          
+					    &emsp;&emsp;<comment>to finish the average, divide gradeSum by 5</comment>&emsp; <br>
+					    &emsp;&emsp;gradeAverage = gradeSum/<num>5</num>;&emsp; <br>&emsp; <br>
+					          
+					    &emsp;&emsp;<comment>//print out the average</comment>&emsp; <br>
+					    &emsp;&emsp;cout 
+					    	&lt;&lt; <string>"Your science class average is "</string> 
+					    	&lt;&lt; gradeAverage 
+					    	&lt;&lt; <string>".\n"</string>;&emsp; <br>
+					&emsp;}&emsp; <br>
+					&emsp; <br>
+				</p>
+
+				<h3>Challenge 1:</h3> 
+				
+				<p>
+					Can you change the program above so that it takes 7
+					grades instead of 5 to calculate the average?
+				</p>
+
+				<h3>Challenge 2:</h3> 
+				
+				<p>
+					Can you write a program that asks a user to enter 10 nums, puts
+					those nums in an array, and then prints out the nums in the
+					array <i>backwards</i>?  Hint: use a loop that counts backwards.
+				</p>
+
+				<p>
+					Good job!  You are almost finished.  For your last lesson, you'll
+					learn how to <a href="decisions.html">make decisions</a>.
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

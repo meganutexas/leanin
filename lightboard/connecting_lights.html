@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: Guide</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand"><b>UTCS Lean In:</b> Project Illuminate</h2>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li>
+					<!-- TODO: figure out sub dropdown menus -->
+					<a role="menuitem" tabindex="-1" target="_blank" href="tutorial">C++ Tutorial</a>
+					</li>
+					<li>
+						<!-- TODO: figure out sub dropdown menus -->
+						<a role="menuitem" tabindex="-1" href="audacity.html">Audacity Tutorial</a>
+					</li>
+					<li>
+	                		<a role="menuitem" tabindex="-1" href="first_timers.html">First Timers</a>
+	                	</li>
+					<li class="active">
+                		<div id="setup"></div>
+                	</li>
+                	<br>
+                	<li>
+                		<div id="programming"></div>
+                	</li>
+
+                	<li>
+                		<div id="examples"></div>
+                	</li>
+                	<li>
+                		<div id="resources"></div>
+                	</li>
+	                <li><a href="contact.html">Contact</a></li>
+	              </ul>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+				<center>
+				<h1>Connecting the Lights</h1>
+				</center>
+				<hr>
+				<br>
+				<p>
+					Now that you have learned to connect your Arduino board and you have
+					an example program running, let's begin working with the lights.
+				</p>
+				
+				<h3>Hardware</h3>
+				
+				<p>
+					 We're going to begin with the <i>hardware</i>, which is any physical
+					component of the system.  (Can you touch it?  It is hardware!)  In
+					this project, your main pieces of hardware are the lights, Arduino
+					board, and computer, but there are smaller pieces, too, such as the
+					USB cable and wires.
+				</p>
+				
+				<p>
+					First, let's take a look at your lights.  Your strand of lights consists of 25
+					LED lights.  These lights are <i>individually addressable</i>, which means that
+					you can control the color and brightness of each light individually. <!-- the
+					color of each individual light can be--> The color and brightness are set by
+					program commands, and a sequence of program commands can make the lights display
+					a pattern, a message, or whatever the programmer chooses.
+				</p>
+				
+				<p>
+					Looking at the lights again, you'll notice that there are three colors of wire
+					running between the lights.  Each of these wires is serving a purpose: the data
+					wire (green or blue) carries data (or the programmer's instructions) to the lights, 
+					the red wire carries power, and the white wire carries ground.
+				</p>
+				
+				<p>
+					  We've modified the lights for the projects, and the data wire has been
+					extended using a blue wire, the power wire has been extended with red
+					wire, and the ground wire has been extended with black wire.  The
+					red wire and one of the black are already connected to a power cable connector
+					plug&mdash;that is how your lights will be connected to the power adaptor.
+				</p>
+				
+				<h3>Challenge 2:</h3>
+				<h4>Lights Connected Correctly</h4>
+				
+				<p>
+					Next, let's take another look at the Arduino board.  As you look at
+					it, notice the numbered black components:<br>
+					<img src="images/arduino_pins.jpg" align="center" width="400"><br> 
+				</p>
+				
+				<p>
+					Each of the holes is a <i>pin</i>.  Pins are where we will connect the Arduino
+					board to external components.  Find the pin labeled <tt>7</tt>, put the blue
+					wire in this pin (the other end is already connected to the data wire).  We will
+					be using pin 7 to send our instructions from the board to the lights.<br>
+					<img src="images/arduino_pin7.jpg" align="center" width="400"><br>
+				</p>
+					
+				<p>
+					  Connect the free end of a black ground wire to the pin labeled <tt>GND</tt>
+					(for ground, and indicated below).  The other end of this piece of black wire
+					should be connected to the lights--the other black ground wire should already be
+					connected to the lights and the power connector.<br>
+					<img src="images/arduino_grnd.jpg" align="center" width="400"><br> 
+				</p>
+				
+				<p>
+					Now plug in the lights.  To do this, plug the lights into the power adaptor in
+					your box, and then plug the power adaptor into one of the plugs behind the
+					monitor on your desk.  If you have trouble accessing the plug, try using the
+					power strip in your box and then plugging the power adaptor into it.
+				</p>
+				
+				<p>
+					When the lights and Arduino board are fully connected, they should look
+					like this:<br>
+					<img src="images/fully_connected.jpg" align="center" width="800"><br> 
+				</p>
+				
+				<p>
+					Next, we'll learn to <a href="controlling_lights.html">control the
+					lights</a>.
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: Guide</title>
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	             <h2 class="masthead-brand"><b>UTCS Lean In:</b> Project Illuminate</h2>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li>
+					<!-- TODO: figure out sub dropdown menus -->
+					<a role="menuitem" tabindex="-1" target="_blank" href="tutorial">C++ Tutorial</a>
+					</li>
+					<li class="active">
+						<!-- TODO: figure out sub dropdown menus -->
+						<a role="menuitem" tabindex="-1" href="audacity.html">Audacity Tutorial</a>
+					</li>
+					<li>
+	                		<a role="menuitem" tabindex="-1" href="first_timers.html">First Timers</a>
+	                	</li>
+					<li>
+                		<div id="setup"></div>
+                	</li>
+                	<br>
+                	<li>
+                		<div id="programming"></div>
+                	</li>
+
+                	<li>
+                		<div id="examples"></div>
+                	</li>
+                	<li>
+                		<div id="resources"></div>
+                	</li>
+	                <li><a href="contact.html">Contact</a></li>
+	              </ul>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	 <hr>
+		         <h1 align="center">Audacity Tutorial</h1>
+		         <hr>
+		         <p>
+		            <a href="http://web.audacityteam.org/">Audacity</a> is a free, open-source audio editing software. Groups that are setting their lights to music may use any editing software to which they have access that they wish, but we recommend this as a powerful, free tool. Note that this tutorial is far from comprehensive and is geared toward getting your projects ready. For the curious and motivated, the manual is <a target="_blank" href="http://manual.audacityteam.org/o/">here</a>. 
+		         </p>
+		         <h4>Getting started</h4>
+		         <p>
+		            The Audacity software has already been installed on the machines you will be using. To open it, go to the <em>Applications Menu</em> in the top left-hand corner of your screen. Click <em>Run Program&hellip;</em>, type <kbd>audacity</kbd> into the search box, and press <kbd>Enter</kbd>. When presented with any windows or options, go with the default selection until you reach the main window (pictured below). 
+		         </p>
+		         <img src="images/audacity_empty.jpg" /><br />
+		         <br />
+		         <h4>Importing a track</h4>
+		         <p>
+		            To get started editing, you must first import the audio file. Go to <em>File &gt; Import &gt; Audio&hellip;</em> and navigate to and select your track. If at all possible, use mp3 files to ensure compatibility with the software. Not all audio encodings are supported (e.g. WMA). When it is finished importing, you should see something like the image below.
+		         </p>
+		         <img src="images/audacity_track.jpg" />
+		         <p>
+		            You will likely have two identical graphs, as above. Fear not, you are editing one track&mdash;shown are the waveform displays of the left and right channels, or what comes out of your left vs. your right earbuds, in a stereo track. Mono tracks will have one waveform display.
+		         </p>
+		         <h4>Navigation</h4>
+		         <p>
+		            There are a few things you'll need to do in order to set your lights to music. The program that you write will allow you to time your lights precisely. This precision will prove useful when editing your tracks. Notice you may click anywhere along the waveform's length and hit the raised, green play button (pictured below) to start listening from that point through the end of the track. This is different from the other flat, green play button visible in the program's toolbar.
+		         </p>
+		         <img src="images/audacity_buttons.JPG" />
+		         <p>
+		            Pressing this button again will start the music over from the point you selected, pressing Stop will stop playback and return you to the point you selected, and pressing Pause will stop playback and maintain your current position in the track. You may also click and drag along its length, and pressing Play will play only your highlighted selection.
+		         </p>
+		         <p>
+		            More useful for your purposes is the tool toward the bottom of the window (pictured below). This performs the same selective functions, but with greater precision. You may set a timestamp for the beginning of your selection and then either mark the radio button labeled <em>End</em>, signifying the end timestamp of your selection, or check the radio button labeled <em>Length</em>, and give it the length you want your selection to be, instead. Finally, <em>Audio Position</em> keeps a running timestamp of where you are in the track.
+		         </p>
+		         <img src="audacity_selection.JPG" /><br />
+		         <br />
+		         <h4>Editing</h4>
+		         <p>
+		            You may find you want to join separate parts of a track. You can copy/paste selections (make selection &gt; <kbd>Ctrl+c</kbd> &gt; click where it should go &gt; <kbd>Ctrl+v</kbd>). Note that it will only let you do this if the track is not playing or paused; hit the yellow stop button and proceed. For those of you waffling about which of your favorite songs you want to use, you should know that you can have it all. Multiple tracks can be open at the same time, and you can copy/paste between the two, as below.
+		         </p>
+		         <img src="images/audacity_copypaste.jpg" />
+		         <p>
+		            Stereo tracks (those with a left and a right channel) will automatically paste the selection to both channels, so you don't have to worry about synchronizing that operation.
+		         </p>
+		         <p>
+		            One more operation that you may find useful is adding a specific length of silence to your track.
+		         </p>
+		         <p>
+		            Click on the waveform display where you wish to insert the silence. If you wish to add it to the end, click <em>Transport &gt; Skip to End</em> (this is more precise than trying to click the exact ending timestamp). Pressing the <kbd>End</kbd> button on your keyboard serves this same function, and <kbd>Home</kbd> sets your cursor to the beginning. Position set, click <em>Generate &gt; Silence&hellip;</em> and choose the length of silence you wish to insert. Hit <em>OK</em>.
+		         </p>
+		         <img src="images/audacity_silence.jpg" /><br />
+		         <br />
+		         <h4>Finished product</h4>
+		         <p>
+		            Once you have settled on the audio you will use with your light display, you need to export it to its own file. Click <em>File &gt; Export Audio&hellip;</em> and save it to your USB. Choose what kind of audio file you want to save (e.g., mp3). It is probably also wise to save a copy to the hard drive (e.g., to your Music folder). 
+		         </p>
+		         <p>
+		            If for some reason you are unable to select the mp3 option, choose Ogg Vorbis (fairly analogous to mp3, just more special sounding) and move on to bigger and better things, like exporting your track.
+		         </p>
+		         <p>
+		            The next window you see should be a metadata editor. Metadata just gives users more information about the file. Data about data, if you will. Meta! You can leave this alone. Don't worry about any of the buttons except for <em>OK</em>. Press that one.
+		         </p>
+		         <p>
+		            The export itself should take only a few seconds, and voila! You have your track.
+		         </p>				
+		         <br>
+	          </div>
+			</div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

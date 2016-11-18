@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: C++ Tutorial</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand">Project Illuminate: C++ Tutorial</h2>
+	              <center>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="linux.html">Linux</a></li>
+	                <li><a href="intro.html">Intro</a></li>
+	                <li><a href="hello_world.html">Hello World!</a></li>
+	                <li><a href="math_and_user_input.html">Math & User Input</a></li>
+	                &emsp; <br>
+	                <li><a href="functions.html">Functions</a></li>
+	                <li><a href="structs.html">Structs</a></li>
+	                <li><a href="loops.html">Loops</a></li>
+	                <li><a href="arrays.html">Arrays</a></li>
+	                <li class="active"><a href="#">Decisions</a></li>
+	                <li><a href="compile.html">Compile</a></li>
+	              </ul>
+	          	</center>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+	          	<center>
+				<h1>Decisions</h1>
+				</center>
+				<hr>
+				
+				<p>
+					In this section, we're going to learn how to control the flow of a C++
+					program.  Sometimes, you want your program to do one thing if certain
+					conditions are met, and to do another thing if other conditions are
+					true.  We do this with <i>if-statements</i>.
+				</p>
+
+				<p>
+					Let's imagine we have a program that helps police officers in a town
+					give speeding tickets to drivers based on how fast the driver was
+					going.  In this imaginary town, the speed limit is 40 mph, but there
+					are extra penalties if a person goes over 60 mph.
+				</p>
+
+				<p>
+					Here's how the program will work: the policeman (the user) enters the
+					speed of a vehicle in the program.  If the vehicle was going over 40
+					mph, the driver gets a $100 speeding ticket.  But, if the vehicle was
+					going over 60 mph, the driver gets charged $250.  If the vehicle was
+					going 40 mph or under, the driver doesn't get a ticket.  The program
+					will display the fine to the user.
+				</p>
+
+				<p>
+					In order to do this, we will need to test the speed that the user
+					types in (we'll save this to a var called <i>driverSpeed</i> and
+					see if it is greater than 40, and then see if it is also greater than
+					60.  Just like we would in math, we can write this excodession using
+					the greater than/less than symbols and store it in a var:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;isSpeeding = driverSpeed &lt; <num>40</num>;&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					In programming languages, the above statement can either be true or
+					false, depending upon the value of <i>driverSpeed</i>,
+					so <i>isSpeeding</i> will either be true or false.  A var that is
+					either true or false is called a <i>boolean</i>.  In C++ , a boolean
+					that is true displays as a 1, and a boolean that is false displays as
+					a 0 when you print it out to the screen.  So, in our line of code
+					above, if the value of the var <i>isSpeeding</i> is 20, and you
+					printed out <i>isSpeeding</i>, you would see a 0, because 20 is not
+					greater than 40 and the statement is false.
+				</p>
+
+				<p>
+					The following chart shows all the logical operators, most of which
+					should be familiar to you from math class:
+				</p>
+
+				<p>
+					<table class="table table-hover">
+						<thead> 
+						    <tr>
+						      <th>Logical Operator</th>
+						      <th>Meaning</th>
+						      <th>Example of True Statement</th>
+						    </tr>
+					    </thead>
+						<tbody>
+							<tr>
+								<td > &gt;  </td>
+								<td >greater than </td>
+								<td >5  &gt;  4 </td>
+							</tr>
+							
+							<tr>
+								<td > &gt;= </td>
+								<td >greater than or equal to </td>
+								<td >5  &gt;= 5</td>
+							</tr>
+							
+							<tr>
+								<td > &gt;  </td>
+								<td >less than </td>
+								<td >2  &gt;  5</td>
+							</tr>
+							
+							<tr>
+								<td > &gt;= </td>
+								<td >less than or equal to </td>
+								<td >2  &gt;= 3</td>
+							</tr>
+							
+							<tr>
+								<td >== </td>
+								<td >is exactly the same as </td>
+								<td >3 == 3</td>
+							</tr>
+							
+							<tr>
+								<td >!= </td>
+								<td >is not the same as </td>
+								<td >3 != 5</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+
+				<p>
+					The last two operations, == and !=, are called equivalency operators
+					because they check if two things are exactly the same, or equivalent.
+					For example, 9==9 is true because 9 is exactly the same as 9.
+					Additionally, if we have a var <i>myVar</i> and <i>myVar</i>=9,
+					then <i>myVar</i>==9 is true.  However, 9 !="nine" is true because an
+					integer (9) is never exactly the same as a string ("nine").  One more
+					important thing to remember about strings is that capital letters and
+					lowercase letters are considered to be different, so "Nine" and "nine"
+					are not the same.
+				</p>
+
+				<p>
+					In order to test things, we can use if-statements.  An if-statement is
+					used in programming exactly the same way we use it in real life.  "If"
+					something is true, we do one thing; "else" (otherwise) we do something
+					else.  To come back to the speeding ticket program we described above,
+					we could test whether the var <i>isSpeeding</i> is greater than
+					60 by using the following syntax:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<if>if</if> (isSpeeding &gt; <num>60</num>){&emsp; <br>
+						    &emsp;&emsp;ticketPrice = <num>250</num>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp;<else>else</else> {&emsp; <br>
+						    &emsp;&emsp;ticketPrice = <num>0</num>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					When we use if statements, we put the conditional clause (the thing we
+					are checking or testing) in parentheses after the word "if".  Then we
+					put all of the code that we want the computer to execute if the
+					conditional clause is true inside of curly braces.  After an "if", we
+					can have an "else if ", which works exactly the same as an "if" but is
+					only checked by the computer if the "if" statement is false, an else,
+					which is the code that is executed if the "if" statement is false, or
+					nothing.  Please ask questions if you don't understand how
+					if-statements work- we are happy to explain in more detail!
+				</p>
+
+				<p>
+					We now know everything we need to be able to write the speeding ticket
+					program.  We will use an if-else pattern for this program, so we will
+					first check if the speed is greater than 60, and if that is false we
+					will check if the speed is greater than 40, and if that is also false,
+					then we will give a $0 speeding ticket.
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>&emsp; <br>
+						&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						    &emsp;&emsp;<var>int</var> driverSpeed, ticketPrice;&emsp; <br>&emsp; <br>
+						     
+						    &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"Hello policeman.  Enter the speed of the vehicle:"</string>;&emsp; <br>
+						    &emsp;&emsp;cin 
+						     	&gt;&gt; driverSpeed;&emsp; <br>&emsp; <br>
+						     
+						    &emsp;&emsp;<if>if</if> (driverSpeed &lt; <num>60</num>){     <comment>//First check if driver is excessively speeding</comment>&emsp; <br>
+						        &emsp;&emsp;&emsp;ticketPrice = <num>250</num>;&emsp; <br>
+						    &emsp;&emsp;}&emsp; <br>
+						    &emsp;&emsp;<else-if>else if</else-if> (driverSpeed &lt; <num>40</num>) {     <comment>//Then check if driver was going over 40mph</comment>&emsp; <br>
+						        &emsp;&emsp;&emsp;ticketPrice = <num>100</num>;&emsp; <br>
+						    &emsp;&emsp;}&emsp; <br>
+						    &emsp;&emsp;<else>else</else> {          <comment>//If neither of those were true, the driver wasn't speeding</comment>&emsp; <br>
+						        &emsp;&emsp;&emsp;ticketPrice = <num>0</num>;&emsp; <br>      
+						    &emsp;&emsp;}&emsp; <br>
+						    &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"The ticket is $"</string> 
+						     	&lt;&lt; ticketPrice 
+						     	&lt;&lt; <string>".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<h3>Challenge 1:</h3> 
+				
+				<p>
+					Can you modify the above code so that it prints out a separate message
+					for each different level of ticket?  For example, if the driver was
+					going over 60mph, the program could print "You should severely punish
+					the driver for endangering people!" and for a non-speeding ticket, the
+					program could print, "Congratulate the driver on maintaining a safe
+					speed."
+				</p>
+
+				<p>
+					You can also nest if-statements inside each other.  For example, let's
+					say that there is an additional law about wearing seat belts in our
+					imaginary town.  If you are speeding and you are also not wearing a
+					seat belt, you get fined an additional $55.  We can write add this
+					into our code like this (new code is bolded):
+
+					<br>
+					<p class="code">
+							&emsp; <br>
+							&emsp;[...] <comment>// ignoring the beginning stuff</comment>&emsp; <br>&emsp; <br>
+
+							&emsp;<var>int</var> driverSpeed, ticketPrice;&emsp; <br>
+							&emsp;string wearingSeatbelt;     <comment>//string var</comment>&emsp; <br>&emsp; <br>
+
+							&emsp;<comment>//get speed</comment>&emsp; <br>
+							&emsp;cout 
+								&lt;&lt; <string>"Hello policeman.  Enter the speed of the vehicle:"</string>;&emsp; <br>  
+							&emsp;cin 
+								&gt;&gt; driverSpeed;&emsp; <br>&emsp; <br>
+
+							&emsp;<comment>//user will type y or n</comment>&emsp; <br>
+							&emsp;cout 
+								&lt;&lt; <string>"Was the driver wearing a seat belt? y or n:"</string>;&emsp; <br>  
+							&emsp;cin 
+								&gt;&gt; wearingSeatbelt;&emsp; <br>&emsp; <br>
+
+							&emsp;<comment>//First check if driver is excessively speeding</comment>&emsp; <br>
+							&emsp;<if>if</if> (driverSpeed &lt; <num>60</num>){ &emsp; <br>     
+								&emsp;&emsp;<comment>//set the initial ticket price to 250</comment>&emsp; <br>
+								&emsp;&emsp;ticketPrice = <num>250</num>;&emsp; <br>&emsp; <br>     
+							  
+								&emsp;&emsp;<comment>if the speed is over 60 AND </comment>&emsp; <br>
+								&emsp;&emsp;<comment>//the driver wasn't wearing a seat belt</comment>&emsp; <br>
+								&emsp;&emsp;<if>if</if> (wearingSeatbelt == <string>"n"</string>){  &emsp; <br>
+							     	&emsp;&emsp;&emsp;<comment>//add 55 to the old ticket price (250+55=305)</comment>&emsp; <br>
+							     	&emsp;&emsp;&emsp;ticketPrice = ticketPrice + <num>55</num>;&emsp; <br>  
+								&emsp;&emsp;}&emsp; <br>
+							&emsp;}&emsp; <br>
+							&emsp;[...]  <comment>//rest of the program</comment>&emsp; <br>
+							&emsp; <br>
+					</p>
+					<br>
+
+					You can also check if two or more conditions are both true in the same
+					if-statement.  You do this by using &amp;&amp;.  So you can say,
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<comment>//true if both conditionals are true</comment>&emsp; <br>
+						&emsp;<if>if</if> ((driverSpeed &lt; <num>60</num>) &amp;&amp; (wearingSeatbelt == <string>"n"</string>)){      &emsp; <br>
+						    &emsp;&emsp;ticketPrice = <num>305</num>;  <comment>//250 + 55</comment>&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+					
+					If BOTH the first clause (driverSpeed &gt; 60) and the second clause
+					(wearingSeatbelt == "n") are true, then the whole conditional is true.
+					If either are false, the whole thing is false.  There is also an "or"
+					operator (&#124;&#124;), which is true if either or both of the
+					conditions are true:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<comment>// true if one or both conditionals are true</comment>&emsp; <br>
+						&emsp;<if>if</if> ((driverSpeed &lt; <num>60</num>) || (wearingSeatbelt == <string>"n"</string>)){    &emsp; <br>  
+						    &emsp;&emsp;cout 
+						    	&lt;&lt;<string> "You broke the law, buddy!\n"</string>; &emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					Note how we use parentheses to group each conditional, and then group
+					both the conditionals into one statement.  Finally, there is the not
+					operator (!), which negates a conditional clause (again, note the
+					parentheses!):
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<if>if</if> (!(wearingSeatbelt == <string>"n"</string>)){   &emsp; <br>   
+						    &emsp;&emsp;cout 
+						        &lt;&lt; <string>"The driver was wearing a seatbelt!\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<h3>Challenge 2:</h3> 
+				
+				<p>
+					Finish implementing the seat belt law for the driver who goes over
+					40mph (just follow the format above).  Then come up with another law
+					and add it to your code.  Be as creative and ridiculous as you want,
+					and if you need help, ask for it!
+				</p>
+				<p>
+					<b>
+						<h4>
+							Congratulations!  You have finished the C++ tutorial!
+						</h4>
+					</b>
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>
