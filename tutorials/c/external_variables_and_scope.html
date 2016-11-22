@@ -48,77 +48,70 @@
 				</center>
 				<hr>
 				<br>
-				<table>
-					<tr>
-						<!-- code -->
-						<td>
-						<button type="button" class="btn btn-info"><a href="character_array.html">Prev: Character Array</a></button>
-						<br><br>
-						<p class="code">
-							<br>
-							&emsp;<top>#include</top> <header-file>&lt;stdio.h&gt;</header-file>&emsp;<br>
-							&emsp;<top>#define MAXLINE</top> <num>1000</num> <comment>/* max input line size */</comment>&emsp;<br>
-							<br>
-							&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>);&emsp;<br>
-							&emsp;<var>void</var> <function-create>copy</function-create>(<var>void</var>);&emsp;<br>
-							<br>
-							&emsp;<comment>/* print longest input line */</comment>&emsp;<br>
-							&emsp;<function-create>main</function-create>() {&emsp;<br>
-								&emsp;&emsp;<var>int</var> len;                   <comment>/*current line length*/</comment>&emsp;<br>
-								&emsp;&emsp;<var>extern</var> <var>int</var> max;		       <comment>/* maximum length seen so far*/</comment>&emsp;<br>
-								&emsp;&emsp;<var>extern</var> <var>char</var> longest[]      <comment>/* longest line saved here */</comment>&emsp;<br>
-							<br>
-								&emsp;&emsp;max = <num>0</num>;&emsp;<br>
-								&emsp;&emsp;<while>while</while> ((len = <function-use>getline</function-use>()) > <num>0</num>){&emsp;<br>
-									&emsp;&emsp;&emsp;<if>if</if> (len > max)&emsp;<br>
-										&emsp;&emsp;&emsp;&emsp;max = len;&emsp;<br>
-									&emsp;&emsp;&emsp;<function-use>copy</function-use>();&emsp;<br>
-								&emsp;&emsp;}&emsp;<br>
-							<br>
-								&emsp;&emsp;<if>if</if> (max > <num>0</num>) <comment>/* there was a line */</comment>&emsp;<br>
-									&emsp;&emsp;&emsp;<function-use>printf</function-use>(&quot;%s&quot;, longest);&emsp;<br>
-									<br>
-								&emsp;&emsp;<return>return</return> <num>0</num>;&emsp;<br>
-							&emsp;}&emsp;<br>
-							<br>
-							&emsp;<comment>/* getline; read a line <var>int</var>o s, <return>return</return> length */</comment>&emsp;<br>
-							&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>) {&emsp;<br>
-								&emsp;&emsp;<var>int</var> c, i;&emsp;<br>
-								&emsp;&emsp;<var>extern</var> <var>char</var> line[];&emsp;<br>
+					<center>
+					<button type="button" class="btn btn-info"><a href="character_array.html">Prev: Character Array</a></button>
+					</center>
+					<br><br>
+					<p class="code">
+						<br>
+						&emsp;<top>#include</top> <header-file>&lt;stdio.h&gt;</header-file>&emsp;<br>
+						&emsp;<top>#define MAXLINE</top> <num>1000</num> <comment>/* max input line size */</comment>&emsp;<br>
+						<br>
+						&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>);&emsp;<br>
+						&emsp;<var>void</var> <function-create>copy</function-create>(<var>void</var>);&emsp;<br>
+						<br>
+						&emsp;<comment>/* print longest input line */</comment>&emsp;<br>
+						&emsp;<function-create>main</function-create>() {&emsp;<br>
+							&emsp;&emsp;<var>int</var> len;                   <comment>/*current line length*/</comment>&emsp;<br>
+							&emsp;&emsp;<var>extern</var> <var>int</var> max;		       <comment>/* maximum length seen so far*/</comment>&emsp;<br>
+							&emsp;&emsp;<var>extern</var> <var>char</var> longest[]      <comment>/* longest line saved here */</comment>&emsp;<br>
+						<br>
+							&emsp;&emsp;max = <num>0</num>;&emsp;<br>
+							&emsp;&emsp;<while>while</while> ((len = <function-use>getline</function-use>()) > <num>0</num>){&emsp;<br>
+								&emsp;&emsp;&emsp;<if>if</if> (len > max)&emsp;<br>
+									&emsp;&emsp;&emsp;&emsp;max = len;&emsp;<br>
+								&emsp;&emsp;&emsp;<function-use>copy</function-use>();&emsp;<br>
+							&emsp;&emsp;}&emsp;<br>
+						<br>
+							&emsp;&emsp;<if>if</if> (max > <num>0</num>) <comment>/* there was a line */</comment>&emsp;<br>
+								&emsp;&emsp;&emsp;<function-use>printf</function-use>(&quot;%s&quot;, longest);&emsp;<br>
 								<br>
-								&emsp;&emsp;<for>for</for> (i = <num>0</num>; i < MAXLINE-1 && (c = getchar()) != EOF &&  c != &#39;\n&#39;; ++i)&emsp;<br>
-									&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
-								<br>
-								&emsp;&emsp;<if>if</if> ( c == &#39;\n&#39;) {&emsp;<br>
-									&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
-									&emsp;&emsp;&emsp;++i;&emsp;<br>
-								&emsp;&emsp;}&emsp;<br>
-								<br>
-								&emsp;&emsp;line[i] = &#39;\0&#39;;&emsp;<br>
-								<br>
-								&emsp;&emsp;<return>return</return> i;&emsp;<br>
-							&emsp;}&emsp;<br>
+							&emsp;&emsp;<return>return</return> <num>0</num>;&emsp;<br>
+						&emsp;}&emsp;<br>
+						<br>
+						&emsp;<comment>/* getline; read a line <var>int</var>o s, <return>return</return> length */</comment>&emsp;<br>
+						&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>) {&emsp;<br>
+							&emsp;&emsp;<var>int</var> c, i;&emsp;<br>
+							&emsp;&emsp;<var>extern</var> <var>char</var> line[];&emsp;<br>
 							<br>
-							&emsp;<comment>/* copy: copy &#39;from&#39; <var>int</var>o &#39;to&#39;; assume it is big enough */</comment>&emsp;<br>
-							&emsp;<var>void</var> <function-create>copy</function-create>(<var>char</var> to[], <var>char</var> from[]) {&emsp;<br>
-								&emsp;&emsp;<var>int</var> i;&emsp;<br>
-								&emsp;&emsp;<var>extern</var> <var>char</var> line[], longest[];&emsp;<br>
-								<br>
-								&emsp;&emsp;i = <num>0</num>;&emsp;<br>
-								&emsp;&emsp;<while>while</while> ((longest[i] = line[i])) != &#39;\0&#39;&emsp;<br>
-									&emsp;&emsp;&emsp;++i;&emsp;<br>
-							&emsp;}<br>
+							&emsp;&emsp;<for>for</for> (i = <num>0</num>; i < MAXLINE-1 && (c = getchar()) != EOF &&  c != &#39;\n&#39;; ++i)&emsp;<br>
+								&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
 							<br>
-						</p>
-						<td>
-
-						<!-- video -->
-						<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/E8vbe517ddQ" frameborder="0" allowfullscreen></iframe>
-						</td>
-
-					</tr>
-				</table>
+							&emsp;&emsp;<if>if</if> ( c == &#39;\n&#39;) {&emsp;<br>
+								&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
+								&emsp;&emsp;&emsp;++i;&emsp;<br>
+							&emsp;&emsp;}&emsp;<br>
+							<br>
+							&emsp;&emsp;line[i] = &#39;\0&#39;;&emsp;<br>
+							<br>
+							&emsp;&emsp;<return>return</return> i;&emsp;<br>
+						&emsp;}&emsp;<br>
+						<br>
+						&emsp;<comment>/* copy: copy &#39;from&#39; <var>int</var>o &#39;to&#39;; assume it is big enough */</comment>&emsp;<br>
+						&emsp;<var>void</var> <function-create>copy</function-create>(<var>char</var> to[], <var>char</var> from[]) {&emsp;<br>
+							&emsp;&emsp;<var>int</var> i;&emsp;<br>
+							&emsp;&emsp;<var>extern</var> <var>char</var> line[], longest[];&emsp;<br>
+							<br>
+							&emsp;&emsp;i = <num>0</num>;&emsp;<br>
+							&emsp;&emsp;<while>while</while> ((longest[i] = line[i])) != &#39;\0&#39;&emsp;<br>
+								&emsp;&emsp;&emsp;++i;&emsp;<br>
+						&emsp;}<br>
+						<br>
+					</p>
+					<br><br>
+					<center>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/E8vbe517ddQ" frameborder="0" allowfullscreen></iframe>
+					</center>
 	        </div>
 	      </div>
 	    </div>
