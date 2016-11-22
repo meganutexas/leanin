@@ -49,6 +49,10 @@ hr {
   border-color: #993F6C;
 }
 
+th {
+  text-align: center;
+}
+
 img {
   width: 780px;
   margin: auto;
