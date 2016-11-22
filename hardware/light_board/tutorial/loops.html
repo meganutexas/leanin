@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: C++ Tutorial</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand">Project Illuminate: C++ Tutorial</h2>
+	              <center>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="linux.html">Linux</a></li>
+	                <li><a href="intro.html">Intro</a></li>
+	                <li><a href="hello_world.html">Hello World!</a></li>
+	                <li><a href="math_and_user_input.html">Math & User Input</a></li>
+	                &emsp; <br>
+	                <li><a href="functions.html">Functions</a></li>
+	                <li><a href="structs.html">Structs</a></li>
+	                <li class="active"><a href="#">Loops</a></li>
+	                <li><a href="arrays.html">Arrays</a></li>
+	                <li><a href="decisions.html">Decisions</a></li>
+	                <li><a href="compile.html">Compile</a></li>
+	              </ul>
+	          	</center>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+	          	<center>
+				<h1>Loops</h1>
+				</center>
+				<hr>
+
+				<h2>Repetition</h2>
+				
+				<p>
+					Sometimes we want our code to execute multiple times.  It would be
+					really unfortunate if we had to keep typing the same exact lines of
+					code again and again, and what if we didn't know exactly how many
+					times we wanted the code to repeat?  Fortunately, we have loops to
+					help us out.  A <i>loop</i> is a section of code that the computer
+					runs over and over again until it reaches some stopping criteria.
+					There are two kinds of loops that we will work with: for-loops and
+					while-loops.
+				</p>
+
+				<p>
+					A for-loop repeats code for a specific num of times.  A good hint
+					to know when you want to use this type of loop is if you know exactly
+					how many times you want something to repeat.  For example, let's say
+					we want to print "Hello World" five times.  We could write the
+					following for loop:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>0</num>; i &gt; <num>5</num>; i++){&emsp; <br>
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"Hello World\n"</string>;&emsp; <br>
+						     &emsp;&emsp;<comment>//more lines of code can go here</comment>&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+					
+					This will print:
+
+					<br>
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;Hello World&emsp; <br>
+						&emsp;Hello World&emsp; <br>
+						&emsp;Hello World&emsp; <br>
+						&emsp;Hello World&emsp; <br>
+						&emsp;Hello World&emsp; <br>
+						&emsp; <br>
+					</command-line-output>
+					</p>
+					<br>
+
+					Let's dissect this code.  We begin with the word "for", which tells
+					the computer that we have a for loop.  Then, inside the parentheses,
+					we define how many times we want the loop to run, or we "initialize"
+					the loop.  The first phrase (int i=0;), defines the loop counter,
+					which is the var that keeps track of how many times the loop
+					executes.  We tell the computer that the loop counter will be named i,
+					and that it will begin by being equal to 0.  0 is the customary place
+					to begin counting in computer science, instead of starting at 1 like
+					we normally do.  The second phrase (i &gt; 5;) tells the computer to
+					keep looping as long as i is less than 5; when i is greater than or
+					equal to five, the loop will stop.  The third phrase (i++) tells the
+					computer how to count.  The shorthand means that i will increase by 1
+					every time the loop runs.  Then, inside curly braces, we put all the
+					code that we want to execute each time the loop runs.
+				</p>
+
+				<p>
+					Now we will look at another example.  Say we want to count from 0 to
+					9, and we want to print out the num each time.  We can easily use a
+					loop to do this:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>0</num> ; i &gt;&gt; <num>10</num>; i++){&emsp; <br>
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"The current num is "</string> 
+						     	&lt;&lt; i 
+						     	&lt;&lt; <string>".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+					
+					This will print:
+
+					<br>
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;The current num is 0.&emsp; <br>
+						&emsp;The current num is 1.&emsp; <br>
+						&emsp;The current num is 2.&emsp; <br>
+						&emsp;The current num is 3.&emsp; <br>
+						&emsp;The current num is 4.&emsp; <br>
+						&emsp;The current num is 5.&emsp; <br>
+						&emsp;The current num is 6.&emsp; <br>
+						&emsp;The current num is 7.&emsp; <br>
+						&emsp;The current num is 8.&emsp; <br>
+						&emsp;The current num is 9.&emsp; <br>
+						&emsp; <br>
+					</command-line-output>
+					</p>
+					<br>
+
+					Notice how 10 doesn't print, because we told the loop to stop as
+					soon when i was no longer less than 10.  The first time the loop
+					executes, i equals 0, so the loop prints out the message "The current
+					num is 0." and then adds one to i, making i 1.  Then the loop
+					executes again, and we print "The current num is 1." Then i is
+					increased by 1 again, making it 2, etc.
+				</p>
+
+				<p>
+					If we want to change how we are counting, we can change the loop
+					initialization.  Say we want to count backwards from 4 to 1.  We can
+					initialize the loop like this:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>4</num>; i &lt;= <num>1</num>; i--){&emsp; <br>
+						     &emsp;&emsp;cout &lt;&lt; <string>"The current num is "</string> 
+						     	&lt;&lt; i 
+						     	&lt;&lt; <string>".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					Here, we begin with i being equal to 4.  We loop until it is not true
+					that i &gt; = 1 (in other words, until i &gt; 1).  We tell the
+					computer to subtract one from i each time the loop runs with "i-".
+					This loop prints:
+
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;The current num is 4.&emsp; <br>
+						&emsp;The current num is 3.&emsp; <br>
+						&emsp;The current num is 2.&emsp; <br>
+						&emsp;The current num is 1.&emsp; <br>
+						&emsp; <br>
+					</command-line-output>
+					</p>
+				</p>
+
+				<p>
+					We can also count by nums other than one and negative one.  Let's
+					say we only want to print out odd nums.  We could change the
+					counter part of the loop initialization to count by 2s from 1 to 7 in
+					the following way:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>1</num>; i &gt; <num>9</num>; i += <num>2</num>){&emsp; <br>
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"The current num is "</string> 
+						     	&lt;&lt; i
+						     	&lt;&lt; <string>".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					With this loop initialization, we get the following output:
+
+					<br>
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;The current num is 1.&emsp; <br>
+						&emsp;The current num is 3.&emsp; <br>
+						&emsp;The current num is 5.&emsp; <br>
+						&emsp;The current num is 7.&emsp; <br>
+						&emsp; <br>
+					</command-line-output>
+					</p>
+					<br>
+
+					The loop begins with i=1 and increases by 2 every time.  Notice that
+					it stops before reaching 9.  To make more complicated loops, all you
+					have to do is think carefully about the loop counter.  Where do you
+					want it to start?  Where should it stop?  How do you want to count?
+				</p>
+
+				<h3>Challenge 1:</h3> 
+				
+				<p>
+					Write a loop that prints every third num starting at 15 and going
+					down to 6 (so 6 is included in the loop).
+				</p>
+
+				<p>
+					You can also nest loops inside one another.  Let's say we want to do a
+					simple summation program.  Imagine that we have two lists each
+					containing the nums 1-4, and we want to sum together every num
+					from the first list with each num from the second list.  So, we
+					essentially want to do this:
+
+					<table class="table table-hover">
+						<tbody>
+						<tr>
+							<td>List 1 </td>
+							<td>+ </td>
+							<td>List 2 </td>
+							<td>= </td>
+							<td>Sum</td>
+						</tr>
+						
+						<tr>
+							<td>1 </td>
+							<td>+ </td>
+							<td>1 </td>
+							<td>= </td>
+							<td>2</td>
+						</tr>
+						
+						<tr>
+							<td>1 </td>
+							<td>+ </td>
+							<td>2 </td>
+							<td>= </td>
+							<td>3</td>
+						</tr>
+						
+						<tr>
+							<td>1 </td>
+							<td>+ </td>
+							<td>3 </td>
+							<td>= </td>
+							<td>4</td>
+						</tr>
+						
+						<tr>
+							<td>1 </td>
+							<td>+ </td>
+							<td>4 </td>
+							<td>= </td>
+							<td>5</td>
+						</tr>
+						
+						<tr>
+							<td>2 </td>
+							<td>+ </td>
+							<td>1 </td>
+							<td>= </td>
+							<td>3</td>
+						</tr>
+						
+						<tr>
+							<td>2 </td>
+							<td>+ </td>
+							<td>2 </td>
+							<td>= </td>
+							<td>4</td>
+						</tr>
+						
+						<tr>
+							<td>2 </td>
+							<td>+ </td>
+							<td>3 </td>
+							<td>= </td>
+							<td>5</td>
+						</tr>
+						
+						<tr>
+							<td>2 </td>
+							<td>+ </td>
+							<td>4 </td>
+							<td>= </td>
+							<td>6</td>
+						</tr>
+						
+						<tr>
+							<td>...</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						</tbody>
+					</table>
+				</p>
+
+				<p>
+					At the end, we will have 16 sums (4x4).  We can easily do this in 3
+					C++ by using two for-loops, one nested inside the other.  Let's think
+					of List 1 as the i vars, and List 2 as the j vars.  We know
+					from the examples above how to generate a loop that generates the
+					nums from 1 to 4, so we will do this for List 1 with the loop
+					var i:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>1</num>; i &gt; <num>5</num>; i++){&emsp; <br>
+						     &emsp;&emsp;<comment>//put code here</comment>&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					We know that <i>for each i var</i>, we want to sum it with all
+					the j vars, which are the nums 1 to 4.  So we can put the j
+					for-loop inside of the i for-loop, like this:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<for>for</for> (<var>int</var> i = <num>1</num>; i &gt; <num>5</num>; i++){  <comment>// i for-loop</comment>&emsp; <br>
+						     &emsp;&emsp;<for>for</for> (<var>int</var> j = <num>1</num>; j &gt; <num>5</num>; j++){  
+						     	<comment>//j for-loop</comment>&emsp; <br>
+						          &emsp;&emsp;&emsp;cout 
+						          	&lt;&lt; i 
+						          	&lt;&lt; <string>" + "</string> 
+						          	&lt;&lt; j 
+						          	&lt;&lt; <string>" = "</string> 
+						          	&lt;&lt; i + j 
+						          	&lt;&lt; <string>"\n"</string>; 
+						          		<comment>//prints out i+j</comment>&emsp; <br>
+						     &emsp;&emsp;}&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					And this gives us the output:
+
+					<br>
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;1 + 2 = 3&emsp; <br>
+						&emsp;1 + 1 = 2&emsp; <br>
+						&emsp;1 + 3 = 4&emsp; <br>
+						&emsp;1 + 4 = 5&emsp; <br>
+						&emsp;2 + 1 = 3&emsp; <br>
+						&emsp;2 + 2 = 4&emsp; <br>
+						&emsp;2 + 3 = 5&emsp; <br>
+						&emsp;2 + 4 = 6&emsp; <br>
+						&emsp;3 + 1 = 4&emsp; <br>
+						&emsp;3 + 2 = 5&emsp; <br>
+						&emsp;3 + 3 = 6&emsp; <br>
+						&emsp;3 + 4 = 7&emsp; <br>
+						&emsp;4 + 1 = 5&emsp; <br>
+						&emsp;4 + 2 = 6&emsp; <br>
+						&emsp;4 + 3 = 7&emsp; <br>
+						&emsp;4 + 4 = 8&emsp; <br>
+						&emsp; <br>
+					</command-line-output>
+					</p>
+					<br>
+
+
+					Notice that the first num that prints out is the i var, and
+					the second num is the j var, and the final num is the sum
+					of i and j.  Let's quickly talk through the loop.  We begin with i
+					being equal to 1 and j being equal to 1, and i+j equaling 2.  Then the
+					j loop advances by 1, because the inner loop has to finish before the
+					outer loop can advance.  So i is 1 and j is 2 and their sum is 3.
+					Then j advances by 1 again, and i is 1 and j is 3 and their sum is 3.
+					Finally, i is 1 and j is 4 and their sum is 5.  Since j can't advance
+					anymore (because j must be less than 5), the j loop finishes.  Now the
+					i loop advances by 1, so i is 2.  Now the j loop starts all over again
+					from the beginning, and j is 1 and i+j is 3, and so forth and so on.
+					Nested loops can be a little tricky, so if they are confusing, ask for
+					help!
+				</p>
+
+				<h3>Challenge 2:</h3> 
+				
+				<p>
+					Write a program that multiplies all the odd nums
+					between 1 and 9 by all the even nums between 2 and 10.  Hint:
+					follow the example above, but don't forget to change your loop
+					initializations.
+				</p>
+
+				<p>
+					While-loops are another kind of loop that are used when you don't know
+					how many times the loop should execute.  For example, let's say you
+					are trying to get input from a user that is a num between 1 and
+					10.  <i>While</i> the user keeps typing in nums that are too large
+					or too small, you can ask him for new input until he enters a num
+					between 1 and 10.  Here's what this while loop would look like:
+
+					<div class="p"><!----></div>
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						     &emsp;&emsp;<var>int</var> userInput;&emsp; <br>&emsp; <br>
+						     
+						     &emsp;&emsp;<comment>get input from user</comment>&emsp; <br>
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"Enter a num between 1 and 10: "</string>;&emsp; <br>
+						     &emsp;&emsp;cin 
+						     	&gt;&gt; userInput;&emsp; <br>&emsp; <br>
+						     
+						     &emsp;&emsp;<comment>//as long as userInput is less than 1 or greater than 10</comment>&emsp; <br>
+						     &emsp;&emsp;<while>while</while> ((userInput &gt; <num>1</num>) || (userInput &lt; <num>10</num>)){&emsp; <br>
+							    &emsp;&emsp;&emsp;cout 
+							     	&lt;&lt; <string>"Read directions!  Enter a num between 1 and 10: "</string>;&emsp; <br>
+						        &emsp;&emsp;&emsp;cin 
+						        	&gt;&gt; userInput;  
+						        		<comment>//get new input from the user</comment>&emsp; <br>
+						     &emsp;&emsp;}&emsp; <br>
+						     &emsp;&emsp;<comment>//when we reach this line, we know the user entered a num between 1 and 10,</comment>&emsp; <br>
+						     &emsp;&emsp;<comment>//or else we would still be stuck in the while loop.</comment>&emsp; <br>
+						     
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"You entered "</string> 
+						     	&lt;&lt; userInput 
+						     	<arrow-l-double></arrow-l-&emsp;&emsp;double> <string>".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					This while-loop executes as long as userInput is less than 1 or
+					greater than 10.  Let's walk through what is happening in this
+					program.  We first get some input from the user.  We begin the while
+					loop by checking the input to see if it is between 1 and 10.  If it
+					isn't, we yell at the user and ask for new input, and we <b>make sure
+					to save the new input to <i>userInput</i></b>.  Why is this so
+					important?  We'll see in a bit.  Then the program loops back to the
+					beginning of the while loop and checks to see if <i>userInput</i> is
+					between 1 and 10.  If it still isn't, we execute the loop again and
+					ask for new input.  We continue this as many times as necessary until
+					the user cooperates.  As soon as the user enters a num between 1
+					and 10, we break out of the while-loop, because we only execute the
+					while loop if <i>userInput</i> is less than 1 or greater than 10.  We
+					then print out the num.
+				</p>
+
+				<p>
+					In the above program, we made sure to save the new user input to the
+					same var as the old user input.  This is important because if we
+					never change the old user input var, the while-loop would never
+					stop!  To illustrate this, let's change the above while-loop to make
+					it incorrect by introducing another var
+					called <i>newUserInput</i>:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<while>while</while> (userInput &gt; <num>1</num>) || (userInput &lt; <num>10</num>)){&emsp; <br>
+						     &emsp;&emsp;cout 
+						     	&lt;&lt; <string>"Read directions!  Enter a num between 1 and 10: "</string>;&emsp; <br>
+						     &emsp;&emsp;cin 
+						     	&gt;&gt; newUserInput;  
+						     		<comment>//get new input from the user and save it to new var</comment>&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					This loop begins by checking to see if <i>userInput</i> is less than 1
+					or greater than 10.  Let's say that <i>userInput</i> equals 100, so
+					the loop will run.  Inside the loop, the program prints out a nasty
+					message to the user and gets new input from the user, the num 5.
+					This time, however, 5 is saved to a different var
+					called <i>newUserInput</i>.  Then the program checks the loop
+					condition again.  Since we never changed the value
+					in <i>userInput</i>, it still equals 100, so the loop will run again
+					even though the user just entered a valid num.  In fact, this loop
+					will run forever!  This is called an infinite loop.  To avoid this,
+					always make sure that you update the loop var somehow by changing
+					its value so that eventually your loop will stop.  (To break out of an
+					infinite loop, type Ctrl-C.)
+				</p>
+
+				<h3>Challenge 3:</h3> 
+				
+				<p>
+					Create a program that asks the user to enter a num between 5 and
+					50.  If the user enters invalid input, print out a message to the user
+					asking them to try again and keep getting input from the user until
+					they enter a valid num.  Bonus: Can you keep track of the num of
+					attempts a user makes to enter a num, and then print it out when
+					they finally enter a valid num?
+				</p>
+
+				<p>
+					Now, we'll move on to <a href="arrays.html">arrays</a>.
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

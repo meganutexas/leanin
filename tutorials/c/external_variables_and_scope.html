@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles <for>for</for> this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>Lean In C: Externs and Scope </title>
+	</head>
+
+	<body>
+		
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand"><b>UTCS Lean In:</b> C Language - 
+		      Externs and Scope </h2>
+	           <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="compile_and_run.html">Compile & Run</a></li>
+					<li class="active"><a href="chapter1.html">Chapter 1</a></li>
+					<li><a href="chapter2.html">Chapter 2</a></li>
+					<li><a href="chapter3.html">Chapter 3</a></li>
+					<br>
+					<li><a href="chapter4.html">Chapter 4</a></li> 
+
+					<li><a href="chapter5.html">Chapter 5</a></li>
+
+					<li><a href="chapter6.html">Chapter 6</a></li>
+					<li><a href="chapter7.html">Chapter 7</a></li>
+					<li><a href="chapter8.html">Chapter 8</a></li>
+	              </ul>	
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+				<center>
+				<h1>Welcome to the C Tutorial <br> Externs and Scope!</h1>
+				</center>
+				<hr>
+				<br>
+				<table>
+					<tr>
+						<!-- code -->
+						<td>
+						<button type="button" class="btn btn-info"><a href="character_array.html">Prev: Character Array</a></button>
+						<br><br>
+						<p class="code">
+							<br>
+							&emsp;<top>#include</top> <header-file>&lt;stdio.h&gt;</header-file>&emsp;<br>
+							&emsp;<top>#define MAXLINE</top> <num>1000</num> <comment>/* max input line size */</comment>&emsp;<br>
+							<br>
+							&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>);&emsp;<br>
+							&emsp;<var>void</var> <function-create>copy</function-create>(<var>void</var>);&emsp;<br>
+							<br>
+							&emsp;<comment>/* print longest input line */</comment>&emsp;<br>
+							&emsp;<function-create>main</function-create>() {&emsp;<br>
+								&emsp;&emsp;<var>int</var> len;                   <comment>/*current line length*/</comment>&emsp;<br>
+								&emsp;&emsp;<var>extern</var> <var>int</var> max;		       <comment>/* maximum length seen so far*/</comment>&emsp;<br>
+								&emsp;&emsp;<var>extern</var> <var>char</var> longest[]      <comment>/* longest line saved here */</comment>&emsp;<br>
+							<br>
+								&emsp;&emsp;max = <num>0</num>;&emsp;<br>
+								&emsp;&emsp;<while>while</while> ((len = <function-use>getline</function-use>()) > <num>0</num>){&emsp;<br>
+									&emsp;&emsp;&emsp;<if>if</if> (len > max)&emsp;<br>
+										&emsp;&emsp;&emsp;&emsp;max = len;&emsp;<br>
+									&emsp;&emsp;&emsp;<function-use>copy</function-use>();&emsp;<br>
+								&emsp;&emsp;}&emsp;<br>
+							<br>
+								&emsp;&emsp;<if>if</if> (max > <num>0</num>) <comment>/* there was a line */</comment>&emsp;<br>
+									&emsp;&emsp;&emsp;<function-use>printf</function-use>(&quot;%s&quot;, longest);&emsp;<br>
+									<br>
+								&emsp;&emsp;<return>return</return> <num>0</num>;&emsp;<br>
+							&emsp;}&emsp;<br>
+							<br>
+							&emsp;<comment>/* getline; read a line <var>int</var>o s, <return>return</return> length */</comment>&emsp;<br>
+							&emsp;<var>int</var> <function-create>getline</function-create>(<var>void</var>) {&emsp;<br>
+								&emsp;&emsp;<var>int</var> c, i;&emsp;<br>
+								&emsp;&emsp;<var>extern</var> <var>char</var> line[];&emsp;<br>
+								<br>
+								&emsp;&emsp;<for>for</for> (i = <num>0</num>; i < MAXLINE-1 && (c = getchar()) != EOF &&  c != &#39;\n&#39;; ++i)&emsp;<br>
+									&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
+								<br>
+								&emsp;&emsp;<if>if</if> ( c == &#39;\n&#39;) {&emsp;<br>
+									&emsp;&emsp;&emsp;line[i] = c;&emsp;<br>
+									&emsp;&emsp;&emsp;++i;&emsp;<br>
+								&emsp;&emsp;}&emsp;<br>
+								<br>
+								&emsp;&emsp;line[i] = &#39;\0&#39;;&emsp;<br>
+								<br>
+								&emsp;&emsp;<return>return</return> i;&emsp;<br>
+							&emsp;}&emsp;<br>
+							<br>
+							&emsp;<comment>/* copy: copy &#39;from&#39; <var>int</var>o &#39;to&#39;; assume it is big enough */</comment>&emsp;<br>
+							&emsp;<var>void</var> <function-create>copy</function-create>(<var>char</var> to[], <var>char</var> from[]) {&emsp;<br>
+								&emsp;&emsp;<var>int</var> i;&emsp;<br>
+								&emsp;&emsp;<var>extern</var> <var>char</var> line[], longest[];&emsp;<br>
+								<br>
+								&emsp;&emsp;i = <num>0</num>;&emsp;<br>
+								&emsp;&emsp;<while>while</while> ((longest[i] = line[i])) != &#39;\0&#39;&emsp;<br>
+									&emsp;&emsp;&emsp;++i;&emsp;<br>
+							&emsp;}<br>
+							<br>
+						</p>
+						<td>
+
+						<!-- video -->
+						<td>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/E8vbe517ddQ" frameborder="0" allowfullscreen></iframe>
+						</td>
+
+					</tr>
+				</table>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

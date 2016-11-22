@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: C++ Tutorial</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand">Project Illuminate: C++ Tutorial</h2>
+	              <center>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="linux.html">Linux</a></li>
+	                <li><a href="intro.html">Intro</a></li>
+	                <li class="active"><a href="#">Hello World!</a></li>
+	                <li><a href="math_and_user_input.html">Math & User Input</a></li>
+	                &emsp; <br>
+	                <li><a href="functions.html">Functions</a></li>
+	                <li><a href="structs.html">Structs</a></li>
+	                <li><a href="loops.html">Loops</a></li>
+	                <li><a href="arrays.html">Arrays</a></li>
+	                <li><a href="decisions.html">Decisions</a></li>
+	                <li><a href="compile.html">Compile</a></li>
+	              </ul>
+	          	</center>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+	          	<h1 align="center">Hello World!</h1>
+				<hr>
+				<h2>First Program</h2> 
+				
+				<p>
+					It's customary in the world of computer science that whenever you
+					learn a new programming language, you always begin by writing a
+					program to display the text "Hello World" to the screen.  In
+					programming, displaying text is referred to as "printing," so we're
+					going to learn how to print "Hello World".
+				</p>
+
+				<p>
+					Whenever we begin a C++ program, we begin by writing a function
+					called "main".  A function is a group of instructions about how to do
+					some common task.  The main function is the first function that runs
+					when we run our C++ program, and it often contains other functions
+					inside it.  Using the cereal example above, imagine that we had a
+					function called "getMilk" that contained instructions for how to get
+					and open the milk from the fridge.  Let's say we had functions for
+					each part of the algorithm above.  In our main function, we would
+					"call", or ask the computer to run, each of those functions in the
+					order that we wanted them to occur.
+				</p>
+
+				<p>
+					Sometimes, functions are already written for us and are stored in
+					libraries.  Using these functions saves us time and makes programming
+					easier.  For example, in C++ , you <i>could</i> write lines and
+					lines of code to make the computer print a message to the screen.  Or,
+					you could use the <tt>iostream</tt> library that already has a function
+					called <i>cout</i>, which is much simpler!  (Don't worry, we'll just
+					learn how to use cout, and not worry about the <tt>iostream</tt>
+					library.)
+				</p>
+
+				<p>
+					Ok, we're ready to write our first program!  Following the
+					<a href="compile.html">instructions for compiling
+					and running via the command line</a>, copy the following program, save it,
+					 and run it. Then read on
+					for a description of what each part of the program does.
+
+					Note that the first two lines are very important, so you should copy
+					them, too!
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>;&emsp; <br>
+						&emsp;<top>using namespace</top> std;&emsp; <br>
+
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&gt;&gt;<string> "Hello World!\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					Now we'll take a look at the code line-by-line.  First, we tell the
+					computer to include all the functions included in the <i>iostream</i>
+					library when it compiles the program, so that we get to
+					use <i>cout</i>.  We always enclose library names in angle brackets.
+					We then tell it to use all the standard functions included
+					in <i>std</i> with the command <i>using namespace std;</i>.
+				</p>
+
+				<p>
+					Next, we define our main function by saying <tt>int main()</tt>.  This tells
+					the computer that there is a function called main that returns an
+					integer (more on this later).  We then put an open brace to begin the
+					code that goes inside the main function.
+				</p>
+
+				<p>
+					We only have one line of commands for this program.  We tell the
+					computer to use the <i>cout</i> function and then put what we want to
+					display after &gt;&gt;.  You can think of the double-left angle
+					brackets as an arrow pointing toward <i>cout</i>, meaning that we are
+					sending something (in this case, "<tt>Hello World\n</tt> ")
+					to <i>cout</i>.  We put quotation marks around the words we want to
+					display (this is called a string), and end the string with
+					"<tt>\n</tt>".  This is a special character that tells the computer to
+					go to the next line, kind of like hitting enter at the end of a line
+					when you are typing.  In C++, every code line (ones without braces)
+					ends in a semi-colon.  So, we are telling the computer to send our
+					string to <i>cout</i> to be displayed on the screen.  We then use a
+					closing brace to end the function, and with it, the program.
+				</p>
+				
+				<h3>Challenge 1:</h3> 
+				
+				<p>
+					Can you modify the Hello World program so that it prints, "Hello World
+					and <i>Your Name</i>"?  For example, if your name is Justine, it would
+					display, "Hello World and Justine".  Can you add a second line of
+					text?
+				</p>
+
+				<p>
+					Yay!  You have written your first C++ program.  Now, you'll
+					learn <a href="math_and_user_input.html">how to perform simple math</a>.
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>

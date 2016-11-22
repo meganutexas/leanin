@@ -1,0 +1,433 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+		<!-- Bootstrap core CSS -->
+		<link href="bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="css/cover.css" rel="stylesheet">
+
+		<title>First Bytes: C++ Tutorial</title>
+
+	</head>
+
+	<body>
+		<div class="site-wrapper">
+	      <div class="site-wrapper-inner">
+	        <div class="cover-container">
+	          <div class="masthead clearfix">
+	            <div class="inner">
+	              <h2 class="masthead-brand">Project Illuminate: C++ Tutorial</h2>
+	              <center>
+	              <ul class="nav masthead-nav">
+	                <li><a href="index.html">Home</a></li>
+	                <li><a href="linux.html">Linux</a></li>
+	                <li><a href="intro.html">Intro</a></li>
+	                <li><a href="hello_world.html">Hello World!</a></li>
+	                <li><a href="math_and_user_input.html">Math & User Input</a></li>
+	                &emsp; <br>
+	                <li class="active"><a href="#">Functions</a></li>
+	                <li><a href="structs.html">Structs</a></li>
+	                <li><a href="loops.html">Loops</a></li>
+	                <li><a href="arrays.html">Arrays</a></li>
+	                <li><a href="decisions.html">Decisions</a></li>
+	                <li><a href="compile.html">Compile</a></li>
+	              </ul>
+	          	</center>
+	            </div>
+	          </div>
+
+	          <div class="inner cover">
+	          	<hr>
+ 
+				<h1 align="center">Functions</h1>
+				<hr>
+				
+				<p>
+					Functions are a way to organize chunks of your code together.  A
+					function is a group of statements about a related subtask that is
+					bundled together by a name.  For example, we might have
+					a <i>getLetter</i> function that asks the user for a lowercase letter,
+					or an <i>averagenums</i> function that averages a list of nums.
+					Functions are important because they allow your code to be
+					modular---you write a function once, and you can use that function
+					over and over.
+				</p>
+
+				<p>
+					We have already seen some functions.  main() is the most important
+					function in a program, because it contains all the code necessary to
+					start the program and is responsible for calling other functions.
+					Let's take a second to review the setup of main:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						     &emsp;&emsp;<comment>//code goes here</comment>&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					We begin by declaring the <i>return type</i> of main to be an integer.
+					This tells the computer that we intend for main to send back an
+					integer when it is finished.  Usually, this is accomplished through
+					a <i>return</i> statement, and, by convention, main returns a 1 if
+					there was an error and 0 if the program completes successfully.  We
+					haven't been including a return statement and, for main (and, really,
+					only main!), it isn't absolutely necessary. We'll talk more about
+					return types for other functions soon.
+				</p>
+
+				<p>
+					We then write the name of the function, main, and follow it with a set
+					of parentheses.  These parentheses are for parameters. Parameters
+					things like nums or vars that you send to a function so that
+					it can use them in its code.  For our purposes, they are empty for
+					main, but we'll see them in action in other functions soon.
+				</p>
+
+				<p>
+					Finally we have a set of curly braces, and we put the code that
+					belongs to main inside the curly braces.
+				</p>
+
+				<p>
+					Let's try writing a very simple function that prints the greeting
+					"Hello World!".  We will call (run) this function from main.  It won't
+					take any parameters or return anything, so the return type of this
+					function will be <i>void</i>.  Here's how we would set it up:
+
+					<div class="p"><!----></div>
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>;&emsp; <br>
+						&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+						&emsp;<var>void</var> <function-create>printGreeting</function-create>(){&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&lt;&lt; <string>"Hello World!\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>&emsp; <br>
+
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						    &emsp;&emsp;<function-use>printGreeting()</function-use>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					Here, we made the <i>printGreeting</i> function exactly like we made
+					main.  We declared its return type to be void, named it
+					printGreeting, and put no parameters inside the parentheses.  Inside
+					the curly braces, we wrote the same code we used for our very first
+					C++ program.
+				</p>
+
+				<p>
+					What's interesting is how we call, or run, the function.  Inside of
+					main, we call the function by naming it and then putting the
+					arguments, or values to be assigned to the parameters, we want to send
+					it inside of parentheses.  We don't want to send it any arguments
+					since it doesn't accept any parameters (more on this in a bit), so we
+					leave the parentheses blank.  As always, we end the line with a
+					semi-colon.
+				</p>
+
+				<p>
+					The way that this program works is the following: the computer begins
+					running the program inside the main function.  When it gets to
+					the <i>printGreeting</i> function, it "jumps" up to where we defined
+					the <i>printGreeting</i> function and starts executing that code.
+					When it gets to the end of the printGreeting function, it jumps back
+					down to the main function exactly where it left off and continues
+					executing the rest of the code in main.
+				</p>
+
+				<p>
+					Let's look at a slightly more complicated function that uses
+					parameters.  In this example, we're going to change
+					the <i>printGreeting</i> function so that it prints out
+					"Hello <i>name</i>", where <i>name</i> is some name that the user
+					enters.  <i>printGreeting</i> will be sent the name to print out from
+					main.  So, the general layout of this program will be: start in main,
+					get a name from the user, send that name to <i>printGreeting</i>,
+					print out the hello message, go back to main.  It sounds complicated,
+					but it's really codetty easy.
+				</p>
+
+				<p>
+					When a function takes a parameter, we need to tell the computer what
+					kind of parameter to expect.  So, since we want to
+					give <i>printGreeting</i> a name, the parameter will be a string.  We
+					also want to give the computer the name of the parameter to expect,
+					which we can use inside the <i>printGreeting</i> function (but only
+					inside this function).  So we will call it <i>name</i>.  So,
+					the <i>printGreeting</i> function will look like this, with the name
+					var used in the <i>cout</i> function:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>void</var> <function-create>printGreeting</function-create>(string name){&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&lt;&lt; <string>"Hello " 
+						    	&lt;&lt; name 
+						    	&lt;&lt; "!\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+				</p>
+
+				<p>
+					Now the computer knows that anything that calls
+					the <i>printGreeting</i> function will need to provide a string
+					argument that will be called <i>name</i> inside the function.  So, in
+					order to call the function, we need to get some input from the user
+					and provide that input when we call the <i>printGreeting</i> function
+					from main:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						    &emsp;&emsp;string userName;&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&lt;&lt; <string>"Enter a name: "</string>;&emsp; <br>
+						    &emsp;&emsp;cin 
+						    	<arrow-r><arrow-r>userName;&emsp; <br>
+						    &emsp;&emsp;<fucntion-use>printGreeting</fucntion-use>(userName);&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+					
+					Here, we got a string <i>userName</i> from the user and sent it to
+					the <i>printGreeting</i> function by placing it inside the
+					parentheses.
+				</p>
+
+				<p>
+					Before we go any further, we need to have a discussion about the
+					difference between arguments and parameters.  Arguments are what
+					you <i>send</i> to a function, and parameters are what a function
+					expects to <i>receive</i>.  When the <i>printGreeting</i> function is
+					called from main, the argument <i>userName's</i> value is copied to
+					the parameter <i>name</i> in <i>printGreeting</i>.  While the computer
+					is executing the code in <i>printGreeting</i>, it can't use the
+					var <i>userName</i>, because that var is only defined
+					(available) in main.  So that's why we have a parameter <i>name</i>-
+					the value of <i>userName</i> gets copied to <i>name</i> so that the
+					program has access to that data.  When the computer finished
+					executing <i>printGreeting</i> and returns to main, it can again use
+					the var <i>userName</i>, but it can no longer use <i>name</i>.
+					This is what is known as the <i>scope</i> of a var, which means
+					where the var is defined and can be used.
+				</p>
+
+				<p>
+					The reason that functions are so great is that we can reuse them and
+					give them different parameters.  For example, without changing
+					the <i>printGreeting</i> function at all, we can use it to print
+					greetings to three different people:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>;&emsp; <br>
+						&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+						&emsp;<var>void</var> <function-create>printGreeting</function-create>(string name){&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&lt;&lt; <string>"Hello " 
+						    	&lt;&lt; name 
+						    	&lt;&lt; "!\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>&emsp; <br>
+
+						&emsp;<var>int</var> <function-create>main(</function-create>{&emsp; <br>
+						    &emsp;&emsp;printGreeting(<string>"Alison"</string>);&emsp; <br>
+						    &emsp;&emsp;printGreeting(<string>"Brian"</string>);&emsp; <br>
+						    &emsp;&emsp;printGreeting(<string>"Clifford the Big Red Dog"</string>);&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					And we would get the following output:
+
+					<br>
+					<p class="code">
+					<command-line-output>
+						&emsp; <br>
+						&emsp;Hello Alison!&emsp; <br>
+						&emsp;Hello Brian!&emsp; <br>
+						&emsp;Hello Clifford the Big Red Dog!&emsp; <br>
+						&emsp; <br>&emsp; <br>
+					</command-line-output>
+					</p>
+				</p>
+
+				<p>
+					That's codetty convenient.  We can also use functions to do computation
+					for us and return the answers back to main.  For example, let's
+					imagine that we want to write a function called <i>squareANum</i> that
+					calculates the square of a num.  We know from math class that the
+					square of a num is that num multiplied by itself.  So, let's
+					write a function that takes a floating point num and squares it.
+					After we figure out the square of the num (which we'll
+					call <i>numSquared</i>), we'll need a way to return our answer back to
+					the function that called it.  To do this, we simply say:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<return>return</return> numSquared;
+						&emsp; <br>&emsp; <br>
+					</p>
+					<br>
+
+					This is called the return statement, and it is always the <b>last</b>
+					line in a function.  Since we know that we are squaring floats, we
+					will be returning a float, so the return type of this function will be
+					a float as well.  Now we're ready to write our function:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<var>float</var> squareANum(<var>float</var> num){&emsp; <br>
+						    &emsp;&emsp;<var>float</var> numSquared;&emsp; <br>&emsp; <br>
+
+						    &emsp;&emsp;numSquared = num * num;&emsp; <br>
+						    &emsp;&emsp;<return>return</return> numSquared;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					We write the function as we normally would, and then tell the computer
+					to return <i>numSquared</i> to the function that called it.  Since we
+					are returning something to main, we need to set up a var to store
+					the value that we are returning.  This part of programming is like
+					playing a game of catch.  You can imagine that <i>squareANum</i> and
+					main are playing a game of catch, and <i>squareANum</i> is throwing a
+					ball named <i>numSquared</i> at main.  If main doesn't catch the ball
+					by having a var ready to catch it, the ball will fall in the
+					grass and be lost.  In programming, if a function doesn't have a
+					var in place to receive a returned value, that value is gone
+					forever.  To codevent this from happening, we'll set our function call
+					to <i>squareANum</i> equal to the var <i>theNumSquared</i>.
+					Here's the whole program:
+
+					<br>
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file>&lt;iostream&gt;</header-file>&emsp; <br>
+						&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+						&emsp;<var>float</var> squareANum(<var>float</var> num){&emsp; <br>
+						    &emsp;&emsp;<var>float</var> numSquared;&emsp; <br>&emsp; <br>
+
+						    &emsp;&emsp;numSquared = num * num;&emsp; <br>
+						    &emsp;&emsp;<return>return</return> numSquared;&emsp; <br>
+						&emsp;}&emsp; <br>&emsp; <br>
+
+						&emsp;<var>int</var> <function-create>main</function-create>(){&emsp; <br>
+						    &emsp;&emsp;<var>float</var> numToSquare, theSquarednum;&emsp; <br>&emsp; <br>
+						          
+						    &emsp;&emsp;numToSquare = <num>5.5</num>;&emsp; <br>
+						    &emsp;&emsp;theSquarednum = squareANum(numToSquare);  <comment>//catch the returned value</comment>&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&gt;<arrow-l> </arrow-l>numToSquare 
+						    	&lt;&lt; <string>" squared equals " </string>
+						    	&lt;&lt; theSquarednum 
+						    	&lt;&lt;<string> ".\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					Note that you must either a) write a function's code earlier in the
+					program text than it is called or b) include a prototype of that
+					function at the top of the file.  A <i>function prototype</i> is just
+					the return type, name, and parameter definition followed by a
+					semicolon.  Function prototypes usually appear before the first
+					function and after the <tt>include</tt> files.
+				</p>
+
+				<h3>Challenge 1:</h3>
+				
+				<p>
+					Write a program similar to the one that triples a num and adds 5 to it.
+				</p>
+
+				<p>
+					Finally, we can write functions that take multiple parameters of
+					different kinds.  For example, we can modify the <i>printGreeting</i>
+					function so that it takes both a string name and an integer age, and
+					prints out a message about that person's age:
+
+					<p class="code">
+						&emsp; <br>
+						&emsp;<top>#include</top> <header-file> &lt;iostream&gt;</header-file>&emsp; <br>
+						&emsp;<top>#include</top><header-file> &lt;string&gt;</header-file>&emsp; <br>&emsp; <br>
+
+						&emsp;<top>using namespace</top> std;&emsp; <br>&emsp; <br>
+
+						&emsp;<var>void</var> <function-create>printGreeting</function-create>(string name, <var>int</var> age){&emsp; <br>
+						    &emsp;&emsp;cout 
+						    	&lt;&lt;<string>"Hello " 
+						    	&lt;&lt;name
+						    	&lt;&lt;"!\n"</string>;&emsp; <br>
+						    &emsp;&emsp;cout
+						    	&lt;&lt;<string>"You are "
+						    	&lt;&lt;age
+						    	&lt;&lt;" year old.\n"</string>;&emsp; <br>
+						&emsp;}&emsp; <br>&emsp; <br>
+
+
+						&emsp;<var>int</var> <function-create>main()</function-create>{&emsp; <br>
+						    &emsp;&emsp;<function-use>printGreeting</function-use>(<string>"Ronald McDonald"</string>, <num>49</num>);&emsp; <br>
+						&emsp;}&emsp; <br>
+						&emsp; <br>
+					</p>
+					<br>
+
+					We just have to remember to send the function all parameters it
+					expects as arguments when we call it.  Although we can have different
+					nums and types of parameters, a function can only return one thing,
+					so think carefully about what exactly you want to get back from a
+					function before you write it.
+				</p>
+				
+				<h3>Challenge 2:</h3> 
+				<p>
+					Modify the <i>printGreeting</i> function to also
+					take a string <i>birthdayMonth</i> parameter, and print out a message
+					that tells them how old they will be the next time it is that month.
+					For the Ronald McDonald example, the output might be, "You will be 50
+					next January".
+				</p>
+				
+				<p>
+					Now, let's learn about a special data
+
+					type, <a href="structs.html">structs</a>.
+				</p>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+
+    <script src="js/load.js"></script>
+
+	</body>
+</html>
