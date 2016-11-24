@@ -11,7 +11,7 @@
 		<!-- Custom styles for this template -->
 		<link href="css/cover.css" rel="stylesheet">
 
-		<title>Lean In Lego Robot</title>
+		<title>Lego Robot: BASE</title>
 	</head>
 
 	<body>
@@ -28,7 +28,7 @@
 		                <li><a href="var_and_sound.html">Var and Sound</a></li>
 		                <li><a href="actions.html">Actions</a></li>
 		                <li><a href="conditionals_and_user_input.html">Conditionals and User Input</a></li>
-		                <li><a href="Loops.html">Loops</a></li>
+		                <li><a href="loops.html">Loops</a></li>
 		                <li><a href="audio_files.html">Audio Files</a></li>
 		                <li><a href="arrays.html">Arrays</a></li>
 		                <li><a href="into_to_robots.html">Intro to Robots</a></li>
@@ -40,10 +40,10 @@
 	          <div class="inner cover">
 	          	<hr>
 				<center>
-				<h1>Welcome to Lego Mindstorms!</h1>
+				<h1>Welcome to BASE!</h1>
 				<hr>
 				<br>
-				<p>This tutorial assumes you already know at at least one programming language. The tutorials shows what different types of code. For questions email megan.avery720@gmail.com</p>
+				<h3>UNDER CONSTRUCTION</h3>
 				</center>
 	          </div>
 	        </div>
