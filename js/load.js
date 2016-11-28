@@ -7,10 +7,8 @@ $(function () {
 })
 
 $(function(){
-	$("#social").load("menus/social.html");
-	$("#hardware").load("menus/hardware.html");
-	$("#tutorials").load("menus/tutorials.html");
-	$("#libraries").load("menus/libraries.html");
+	$("#social").load("/~meg1022/leanin/menus/social.html");
+	$("#tutorials").load("/~meg1022/leanin/menus/tutorials.html");
 });
 
 document.registerElement('question');

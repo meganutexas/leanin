@@ -41,57 +41,50 @@
 	            </div>
 	          </div>
 
-	          <div class="inner cover">
+	          <div class="inner cover tutorial">
 	          	<hr>
 				<center>
 				<h1>Welcome to the C Tutorial <br> Functions!</h1>
 				</center>
 				<hr>
 				<br>
-				<table>
-					<tr>
-						<!-- code -->
-						<td>
-						<button type="button" class="btn btn-info"><a href="word_counting.html">Prev: Word Counting</a></button>
-						<br><br>
-						<p class="code">
+				<button type="button" class="btn btn-info"><a href="word_counting.html">Prev: Word Counting</a></button>
+				<br><br>
+				<p class="code">
+					<br>
+					&emsp;<top>#include</top> <header-file> &lt;stdio.h&gt;</header-file>&emsp;<br>
+					<br>
+					&emsp;<var>int</var> power(<var>int</var> m, <var>int</var> n);&emsp;<br>
+					<br>
+					&emsp;<comment>/* test power function */</comment>&emsp;<br>
+					&emsp;<function-create>main</function-create>(){&emsp;<br>
+						&emsp;&emsp;<var>int</var> i;&emsp;<br>
 							<br>
-							&emsp;<top>#include</top> <header-file> &lt;stdio.h&gt;</header-file>&emsp;<br>
-							<br>
-							&emsp;<var>int</var> power(<var>int</var> m, <var>int</var> n);&emsp;<br>
-							<br>
-							&emsp;<comment>/* test power function */</comment>&emsp;<br>
-							&emsp;<function-create>main</function-create>(){&emsp;<br>
-								&emsp;&emsp;<var>int</var> i;&emsp;<br>
-									<br>
-								&emsp;&emsp;<for>for</for> (i = <num>0</num>; i &lt; <num>10</num>; ++i)&emsp;<br>
-									&emsp;&emsp;&emsp;<function-use>printf</function-use>(<string>&quot;%d %d %d\n&quot;</string>
-									, i, power(<num>2</num>, i), power(<num>-3</num>,i));&emsp;<br>
-								&emsp;&emsp;<return>return</return> <num>0</num>;&emsp;<br>
-							&emsp;}&emsp;<br>
-							<br>
-							&emsp;<comment>/* power: raise base to n-th power; n &gt;= 0 */</comment>&emsp;<br>
-							&emsp;<var>int</var> power(<var>int</var> base, <var>int</var> n) {&emsp;<br>
-								&emsp;&emsp;<var>int</var> i, p;&emsp;<br>
-								&emsp;&emsp;p = <num>1</num>;&emsp;<br>
-								<br>
-								&emsp;&emsp;<for>for</for> (i = <num>1</num>; i &lt;= n; ++i)&emsp;<br>
-									&emsp;&emsp;&emsp;p = p * base;&emsp;<br>
-								&emsp;&emsp;<return>return</return> p;&emsp;<br>
-							&emsp;}&emsp;<br>
-							<br>
-						</p>
+						&emsp;&emsp;<for>for</for> (i = <num>0</num>; i &lt; <num>10</num>; ++i)&emsp;<br>
+							&emsp;&emsp;&emsp;<function-use>printf</function-use>(<string>&quot;%d %d %d\n&quot;</string>
+							, i, power(<num>2</num>, i), power(<num>-3</num>,i));&emsp;<br>
+						&emsp;&emsp;<return>return</return> <num>0</num>;&emsp;<br>
+					&emsp;}&emsp;<br>
+					<br>
+					&emsp;<comment>/* power: raise base to n-th power; n &gt;= 0 */</comment>&emsp;<br>
+					&emsp;<var>int</var> power(<var>int</var> base, <var>int</var> n) {&emsp;<br>
+						&emsp;&emsp;<var>int</var> i, p;&emsp;<br>
+						&emsp;&emsp;p = <num>1</num>;&emsp;<br>
 						<br>
-						<button type="button" class="btn btn-info"><a href="arguments.html">Next: Arguments - Call by Value</a></button>
-						<td>
-
-						<!-- video -->
-						<td>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/52KLSWTHnVo" frameborder="0" allowfullscreen></iframe>
-						</td>
-
-					</tr>
-				</table>
+						&emsp;&emsp;<for>for</for> (i = <num>1</num>; i &lt;= n; ++i)&emsp;<br>
+							&emsp;&emsp;&emsp;p = p * base;&emsp;<br>
+						&emsp;&emsp;<return>return</return> p;&emsp;<br>
+					&emsp;}&emsp;<br>
+					<br>
+				</p>
+				<br>
+				
+				<br>
+				<button type="button" class="btn btn-success"><a href="chapter_1/functions.c" download="functions.c">Download Code</a></button>
+				<br><br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/52KLSWTHnVo" frameborder="0" allowfullscreen></iframe>
+				<br><br>
+				<button type="button" class="btn btn-info"><a href="arguments.html">Next: Arguments - Call by Value</a></button>
 	        </div>
 	      </div>
 	    </div>

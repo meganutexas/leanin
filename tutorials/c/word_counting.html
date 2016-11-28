@@ -41,58 +41,49 @@
 	            </div>
 	          </div>
 
-	          <div class="inner cover">
+	          <div class="inner cover tutorial">
 	          	<hr>
 				<center>
 				<h1>Welcome to the C Tutorial <br> Word Counting!</h1>
 				</center>
 				<hr>
 				<br>
-				<table>
-					<tr>
-						<!-- code -->
-						<td>
-						<button type="button" class="btn btn-info"><a href="line_counting.html">Prev: Line Counting</a></button>
-						<br><br>
-						<p class="code">
-							<br>
-							&emsp;<top>#include</top> <header-file>&lt;stdio.h&gt;</header-file>&emsp;<br>
-						 	<br>
-							&emsp;<top>#define IN</top> <num>1</num>     <comment>/* inside a word*/</comment>&emsp;<br>
-							&emsp;<top>#define OUT</top> <num>0</num>   <comment>/* outside a word */</comment>&emsp;<br>
-						  	<br>
-						  	&emsp;<comment>/* count lines, words, and characters in input */</comment>&emsp;<br>
-						  	&emsp;<function-create>main</function-create>() {&emsp;<br>
-								&emsp;&emsp;<var>int</var> c, n1, nw, nc, state;&emsp;<br>
-								<br>
-								&emsp;&emsp;state = OUT;&emsp;<br>
-								&emsp;&emsp;n1 = nw = nc = <num>0</num>;&emsp;<br>
-								&emsp;&emsp;<while>while</while> ((c = <function-use>getchar</function-use>()) != EOF) {&emsp;<br>
-									&emsp;&emsp;&emsp;++nc;&emsp;<br>
-									&emsp;&emsp;&emsp;<if>if</if> (c == &#39;\n&#39;)&emsp;<br>
-										&emsp;&emsp;&emsp;&emsp;++n1;&emsp;<br>
-									&emsp;&emsp;&emsp;<if>if</if> (c == <string>&#39; &#39;</string> || c == <string>&#39;\n&#39;</string> || c == <string>&#39;\t&#39;</string>)&emsp;<br>
-										&emsp;&emsp;&emsp;&emsp;state = OUT;&emsp;<br>
-									&emsp;&emsp;&emsp;<else>else if</else> (state == OUT) {&emsp;<br>
-										&emsp;&emsp;&emsp;&emsp;state = IN;&emsp;<br>
-										&emsp;&emsp;&emsp;&emsp;++nw;&emsp;<br>
-									&emsp;&emsp;&emsp;}&emsp;<br>
-									&emsp;&emsp;&emsp;<function-use>printf</function-use>(<string>&quot;%d %d %d\n&quot;</string>, n1, nw, nc);&emsp;<br>
-								&emsp;&emsp;}&emsp;<br>
-							&emsp;}&emsp;<br>
-							<br>
-						</p>
+				<button type="button" class="btn btn-info"><a href="line_counting.html">Prev: Line Counting</a></button>
+				<br><br>
+				<p class="code">
+					<br>
+					&emsp;<top>#include</top> <header-file>&lt;stdio.h&gt;</header-file>&emsp;<br>
+				 	<br>
+					&emsp;<top>#define IN</top> <num>1</num>     <comment>/* inside a word*/</comment>&emsp;<br>
+					&emsp;<top>#define OUT</top> <num>0</num>   <comment>/* outside a word */</comment>&emsp;<br>
+				  	<br>
+				  	&emsp;<comment>/* count lines, words, and characters in input */</comment>&emsp;<br>
+				  	&emsp;<function-create>main</function-create>() {&emsp;<br>
+						&emsp;&emsp;<var>int</var> c, n1, nw, nc, state;&emsp;<br>
 						<br>
-						<button type="button" class="btn btn-info"><a href="functions.html">Next: Functions</a></button>
-						<td>
-
-						<!-- video -->
-						<td>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/2a1so04wDu4" frameborder="0" allowfullscreen></iframe>
-						</td>
-
-					</tr>
-				</table>
+						&emsp;&emsp;state = OUT;&emsp;<br>
+						&emsp;&emsp;n1 = nw = nc = <num>0</num>;&emsp;<br>
+						&emsp;&emsp;<while>while</while> ((c = <function-use>getchar</function-use>()) != EOF) {&emsp;<br>
+							&emsp;&emsp;&emsp;++nc;&emsp;<br>
+							&emsp;&emsp;&emsp;<if>if</if> (c == &#39;\n&#39;)&emsp;<br>
+								&emsp;&emsp;&emsp;&emsp;++n1;&emsp;<br>
+							&emsp;&emsp;&emsp;<if>if</if> (c == <string>&#39; &#39;</string> || c == <string>&#39;\n&#39;</string> || c == <string>&#39;\t&#39;</string>)&emsp;<br>
+								&emsp;&emsp;&emsp;&emsp;state = OUT;&emsp;<br>
+							&emsp;&emsp;&emsp;<else>else if</else> (state == OUT) {&emsp;<br>
+								&emsp;&emsp;&emsp;&emsp;state = IN;&emsp;<br>
+								&emsp;&emsp;&emsp;&emsp;++nw;&emsp;<br>
+							&emsp;&emsp;&emsp;}&emsp;<br>
+							&emsp;&emsp;&emsp;<function-use>printf</function-use>(<string>&quot;%d %d %d\n&quot;</string>, n1, nw, nc);&emsp;<br>
+						&emsp;&emsp;}&emsp;<br>
+					&emsp;}&emsp;<br>
+					<br>
+				</p>
+				<br><br>
+				<button type="button" class="btn btn-success"><a href="chapter_1/word_counting.c" download="word_counting.c">Download Code</a></button>
+				<br><br>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/2a1so04wDu4" frameborder="0" allowfullscreen></iframe>
+				<br><br>
+				<button type="button" class="btn btn-info"><a href="functions.html">Next: Functions</a></button>	
 	        </div>
 	      </div>
 	    </div>
